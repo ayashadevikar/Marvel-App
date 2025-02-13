@@ -8,7 +8,7 @@ const [url,setUrl] = useState("");
 const [item,SetItem] = useState();
 useEffect(()=>{
       const fetch = async()=>{
-            const res = await axios.get(`http://gateway.marvel.com/v1/public/characters?ts=1&apikey=2de96d32476a4d63624e927e9b82bb88&hash=c40f6841d6c7057bfe9242f76f7e586a`)
+            const res = await axios.get(`https://gateway.marvel.com/v1/public/characters?ts=1&apikey=2de96d32476a4d63624e927e9b82bb88&hash=c40f6841d6c7057bfe9242f76f7e586a`)
             SetItem(res.data.data.results);
       }
       fetch();
